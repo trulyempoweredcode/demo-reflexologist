@@ -4991,11 +4991,16 @@ a.card--service:hover .card__link {
   width: 24px;
   height: 24px;
   color: var(--color-primary);
-  transition: transform var(--transition-base);
 }
 
-.accordion__item--open .accordion__icon {
-  transform: rotate(45deg);
+.accordion__icon line {
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  transform-origin: center;
+}
+
+.accordion__item--open .accordion__icon .accordion__icon-vertical {
+  opacity: 0;
+  transform: rotate(90deg);
 }
 
 .accordion__content {

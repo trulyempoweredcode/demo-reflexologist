@@ -325,6 +325,48 @@
   }
 
   /* -----------------------------------------
+     SERVICES SIDEBAR
+     Auto-generate sidebar nav from service
+     sections. Highlight active on scroll.
+     ----------------------------------------- */
+  var sidebar = document.querySelector('.services-sidebar');
+  if (sidebar) {
+    var serviceSections = document.querySelectorAll('[id^="service-"]');
+    if (serviceSections.length) {
+      var navHtml = '<p class="services-sidebar__heading">Treatments</p><nav class="services-sidebar__nav">';
+      serviceSections.forEach(function (sec) {
+        var title = sec.querySelector('h2');
+        if (title) {
+          navHtml += '<a href="#' + sec.id + '" class="services-sidebar__link">' + title.textContent + '</a>';
+        }
+      });
+      navHtml += '</nav>';
+      navHtml += '<a href="contact.html" class="btn btn--primary services-sidebar__btn">Book a Treatment</a>';
+      navHtml += '<a href="contact.html" class="btn btn--secondary services-sidebar__btn">Free Consultation</a>';
+      sidebar.innerHTML = navHtml;
+
+      // Active link tracking
+      var sidebarLinks = sidebar.querySelectorAll('.services-sidebar__link');
+      if ('IntersectionObserver' in window) {
+        var sidebarObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              sidebarLinks.forEach(function (link) {
+                link.classList.toggle('services-sidebar__link--active',
+                  link.getAttribute('href') === '#' + entry.target.id);
+              });
+            }
+          });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        serviceSections.forEach(function (sec) {
+          sidebarObserver.observe(sec);
+        });
+      }
+    }
+  }
+
+  /* -----------------------------------------
      COOKIE CONSENT BANNER
      Show banner if not previously accepted.
      Store preference in localStorage.
