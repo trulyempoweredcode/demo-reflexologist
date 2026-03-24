@@ -3032,6 +3032,10 @@ a.card--service:hover .card__link {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.page-header--dark .section-label {
+  color: var(--color-secondary-light);
+}
+
 .page-header--dark .breadcrumb__link {
   color: rgba(255, 255, 255, 0.7);
 }
