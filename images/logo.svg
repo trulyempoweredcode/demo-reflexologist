@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 48" width="40" height="48">
-  <!-- Simple foot silhouette with a leaf/nature accent -->
-  <path d="M20 4C14 4 10 10 10 18c0 4 1 7 3 10l2 4c1 2 3 4 5 6 2-2 4-4 5-6l2-4c2-3 3-6 3-10C30 10 26 4 20 4z" fill="none" stroke="#5B7B6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Small leaf at top -->
-  <path d="M20 8c-2 2-3 5-2 7 2 0 5-1 7-3-2-2-5-3-7-2" fill="#C4956A" opacity="0.4" stroke="#C4956A" stroke-width="0.5"/>
-  <line x1="20" y1="8" x2="23" y2="11" stroke="#C4956A" stroke-width="0.8"/>
-  <!-- Three horizontal zone lines -->
-  <line x1="14" y1="17" x2="26" y2="17" stroke="#5B7B6F" stroke-width="0.8" opacity="0.3"/>
-  <line x1="13" y1="22" x2="27" y2="22" stroke="#5B7B6F" stroke-width="0.8" opacity="0.3"/>
-  <line x1="15" y1="27" x2="25" y2="27" stroke="#5B7B6F" stroke-width="0.8" opacity="0.3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+  <!-- Compact foot outline with leaf accent -->
+  <path d="M18 3C13 3 10 8 10 14c0 3.5 1 6 2.5 8.5L14 25c1 1.5 2.5 3.5 4 5 1.5-1.5 3-3.5 4-5l1.5-2.5C25 20 26 17.5 26 14 26 8 23 3 18 3z" fill="none" stroke="#5B7B6F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Small leaf -->
+  <path d="M18 7c-1.5 1.5-2 3.5-1.5 5 1.5 0 3.5-.8 5-2.2-1.5-1.5-3.5-2.2-5-1.5" fill="#C4956A" opacity="0.45" stroke="#C4956A" stroke-width="0.5"/>
+  <line x1="18" y1="7" x2="20.5" y2="9.5" stroke="#C4956A" stroke-width="0.7"/>
+  <!-- Zone lines -->
+  <line x1="13" y1="14" x2="23" y2="14" stroke="#5B7B6F" stroke-width="0.6" opacity="0.25"/>
+  <line x1="12.5" y1="18" x2="23.5" y2="18" stroke="#5B7B6F" stroke-width="0.6" opacity="0.25"/>
+  <line x1="14" y1="22" x2="22" y2="22" stroke="#5B7B6F" stroke-width="0.6" opacity="0.25"/>
 </svg>
