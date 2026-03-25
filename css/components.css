@@ -2634,7 +2634,7 @@ a.card--service:hover .card__link {
    ============================================= */
 /* Service section wrapper — use around each service block */
 .service-section {
-  padding: 60px 0;
+  padding: 96px 0;
   border-bottom: 1px solid var(--color-border-light);
 }
 
@@ -2773,7 +2773,7 @@ a.card--service:hover .card__link {
     position: sticky;
     top: 100px;
     align-self: start;
-    margin-top: 60px;
+    margin-top: 96px;
     padding: var(--space-md);
     background: var(--color-surface);
     border-radius: var(--radius-lg);
@@ -2954,7 +2954,7 @@ a.card--service:hover .card__link {
 
 .privacy-content h2 {
   font-size: var(--text-xl);
-  margin-top: 60px;
+  margin-top: 96px;
   margin-bottom: var(--space-md);
 }
 
@@ -2997,7 +2997,7 @@ a.card--service:hover .card__link {
    PAGE HEADER (inner pages)
    ============================================= */
 .page-header {
-  padding: 60px 0;
+  padding: 96px 0;
   background-color: var(--color-bg-alt);
   text-align: center;
 }
@@ -6066,7 +6066,7 @@ a.card--service:hover .card__link {
 
 .blog-post__body h2 {
   font-size: var(--text-xl);
-  margin-top: 60px;
+  margin-top: 96px;
   margin-bottom: var(--space-md);
 }
 
@@ -6136,7 +6136,7 @@ a.card--service:hover .card__link {
   align-items: center;
   gap: var(--space-md);
   padding-top: var(--space-2xl);
-  margin-top: 60px;
+  margin-top: 96px;
   border-top: 1px solid var(--color-border-light);
 }
 
