@@ -4,8 +4,8 @@
     {
       "name": "reflexologist",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "."],
-      "port": 3000
+      "runtimeArgs": ["serve", "D:\\claude-custom-projects\\Ai-Editor-Sites\\demo-reflexologist", "-l", "8096"],
+      "port": 8096
     }
   ]
 }

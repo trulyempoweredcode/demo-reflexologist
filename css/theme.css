@@ -1,42 +1,61 @@
 /* =============================================
-   THEME: Calm Sage
-   Warm, natural — therapists, wellness, yoga
-   Font Pairing: Boutique (Fraunces + DM Sans)
+   THEME: Soft Blush
+   Gentle, feminine — beauty, wellness, reflexology
+   Font Pairing: Playful (Baloo 2 + Nunito)
    ============================================= */
 
 /* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;500;600;700&display=swap');
 
 /* --- Theme Variables --- */
 :root {
   /* Colour Palette */
-  --color-primary: #5B7B6F;
-  --color-primary-light: #7A9E8E;
-  --color-primary-dark: #3D5A4F;
-  --color-secondary: #C4956A;
-  --color-secondary-light: #D4AD8A;
-  --color-secondary-dark: #8B6543;
-  --color-accent: #8B6E99;
-  --color-accent-light: #A68DB3;
+  --color-primary: #B07D8E;
+  --color-primary-light: #C9A0AE;
+  --color-primary-dark: #8E5F6F;
+  --color-secondary: #A89ACD;
+  --color-secondary-light: #C4B9DE;
+  --color-secondary-dark: #7E6FA8;
+  --color-accent: #C9A84C;
+  --color-accent-light: #D4BA6E;
 
-  --color-bg: #FAF8F5;
-  --color-bg-alt: #F0EDE8;
-  --color-bg-dark: #2C3E36;
+  --color-bg: #FDF9F8;
+  --color-bg-alt: #F5EEEC;
+  --color-bg-dark: #3D2E35;
   --color-surface: #FFFFFF;
-  --color-surface-alt: #F7F4F0;
+  --color-surface-alt: #FAF5F3;
 
-  --color-text: #3A3A3A;
-  --color-text-light: #6B6B6B;
-  --color-text-inverse: #FAF8F5;
-  --color-text-heading: #2C3E36;
+  --color-text: #3E3438;
+  --color-text-light: #7A6B72;
+  --color-text-inverse: #FDF9F8;
+  --color-text-heading: #2D2228;
 
-  --color-border: #E0DCD6;
-  --color-border-light: #ECEAE6;
+  --color-border: #E8DDD9;
+  --color-border-light: #F2ECEA;
 
-  --color-success: #5B7B6F;
+  --color-success: #7BAB84;
   --color-error: #C45B5B;
 
   /* Typography */
-  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Baloo 2', 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Heading Size Overrides */
+  --text-h1-desktop: 2.5rem;
+  --text-h2-desktop: 2rem;
+  --text-h3-desktop: 1.5rem;
+}
+
+/* --- Theme Overrides --- */
+
+/* Contact page headings — cap at --text-xl */
+.contact-info h2,
+.contact-form-wrap .card h2 {
+  font-size: var(--text-xl);
+}
+
+/* Testimonial stars centering on centered sections */
+.text-center .testimonial__stars,
+.testimonial--standalone .testimonial__stars {
+  justify-content: center;
 }

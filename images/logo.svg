@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
-  <!-- Compact foot outline with leaf accent -->
-  <path d="M18 3C13 3 10 8 10 14c0 3.5 1 6 2.5 8.5L14 25c1 1.5 2.5 3.5 4 5 1.5-1.5 3-3.5 4-5l1.5-2.5C25 20 26 17.5 26 14 26 8 23 3 18 3z" fill="none" stroke="#5B7B6F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Small leaf -->
-  <path d="M18 7c-1.5 1.5-2 3.5-1.5 5 1.5 0 3.5-.8 5-2.2-1.5-1.5-3.5-2.2-5-1.5" fill="#C4956A" opacity="0.45" stroke="#C4956A" stroke-width="0.5"/>
-  <line x1="18" y1="7" x2="20.5" y2="9.5" stroke="#C4956A" stroke-width="0.7"/>
-  <!-- Zone lines -->
-  <line x1="13" y1="14" x2="23" y2="14" stroke="#5B7B6F" stroke-width="0.6" opacity="0.25"/>
-  <line x1="12.5" y1="18" x2="23.5" y2="18" stroke="#5B7B6F" stroke-width="0.6" opacity="0.25"/>
-  <line x1="14" y1="22" x2="22" y2="22" stroke="#5B7B6F" stroke-width="0.6" opacity="0.25"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <path d="M20 4c-1.5 0-2.8 1.2-3.2 3l-1.8 9c-.3 1.5.4 3 1.8 3.8l-2.5 12.5c-.4 2 .8 3.7 2.5 4.2 1.2.3 2.4.5 3.2.5s2-.2 3.2-.5c1.7-.5 2.9-2.2 2.5-4.2L23.2 19.8c1.4-.8 2.1-2.3 1.8-3.8l-1.8-9C22.8 5.2 21.5 4 20 4z" fill="none" stroke="#B07D8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="12" cy="11" r="2.2" fill="none" stroke="#B07D8E" stroke-width="1.5"/>
+  <circle cx="14.5" cy="6.5" r="2" fill="none" stroke="#B07D8E" stroke-width="1.5"/>
+  <circle cx="18" cy="4.5" r="1.8" fill="none" stroke="#B07D8E" stroke-width="1.5"/>
+  <circle cx="25.5" cy="6.5" r="2" fill="none" stroke="#B07D8E" stroke-width="1.5"/>
+  <circle cx="28" cy="11" r="2.2" fill="none" stroke="#B07D8E" stroke-width="1.5"/>
 </svg>

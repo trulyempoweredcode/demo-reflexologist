@@ -325,45 +325,58 @@
   }
 
   /* -----------------------------------------
-     SERVICES SIDEBAR
-     Auto-generate sidebar nav from service
-     sections. Highlight active on scroll.
+     SERVICES SIDEBAR (auto-generated)
+     Builds sticky sidebar nav from page sections
+     matching [id^="service-"]. Tracks active
+     section via IntersectionObserver.
      ----------------------------------------- */
-  var sidebar = document.querySelector('.services-sidebar');
-  if (sidebar) {
-    var serviceSections = document.querySelectorAll('[id^="service-"]');
-    if (serviceSections.length) {
-      var navHtml = '<p class="services-sidebar__heading">Treatments</p><nav class="services-sidebar__nav">';
-      serviceSections.forEach(function (sec) {
-        var title = sec.querySelector('h2');
-        if (title) {
-          navHtml += '<a href="#' + sec.id + '" class="services-sidebar__link">' + title.textContent + '</a>';
+  var servicesSidebar = document.getElementById('services-sidebar');
+  var serviceSections = document.querySelectorAll('[id^="service-"]');
+  if (servicesSidebar && serviceSections.length) {
+    var sidebarNav = document.createElement('nav');
+    sidebarNav.className = 'services-sidebar__nav';
+    var sidebarHeading = document.createElement('p');
+    sidebarHeading.className = 'services-sidebar__heading';
+    sidebarHeading.textContent = 'Services';
+    sidebarNav.appendChild(sidebarHeading);
+
+    serviceSections.forEach(function (section) {
+      var h2 = section.querySelector('h2');
+      if (!h2) return;
+      var link = document.createElement('a');
+      link.href = '#' + section.id;
+      link.className = 'services-sidebar__link';
+      link.textContent = h2.textContent;
+      sidebarNav.appendChild(link);
+    });
+
+    servicesSidebar.appendChild(sidebarNav);
+
+    // CTA buttons
+    var bookBtn = document.createElement('a');
+    bookBtn.href = 'contact.html';
+    bookBtn.className = 'btn btn--primary services-sidebar__btn';
+    bookBtn.textContent = 'Book a Session';
+    servicesSidebar.appendChild(bookBtn);
+
+    var priceBtn = document.createElement('a');
+    priceBtn.href = 'pricing.html';
+    priceBtn.className = 'btn btn--secondary services-sidebar__btn';
+    priceBtn.textContent = 'View Pricing';
+    servicesSidebar.appendChild(priceBtn);
+
+    // Active link tracking via IntersectionObserver
+    var sidebarLinks = servicesSidebar.querySelectorAll('.services-sidebar__link');
+    var sidebarObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(function (l) { l.classList.remove('services-sidebar__link--active'); });
+          var active = servicesSidebar.querySelector('.services-sidebar__link[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('services-sidebar__link--active');
         }
       });
-      navHtml += '</nav>';
-      navHtml += '<a href="contact.html" class="btn btn--primary services-sidebar__btn">Book a Treatment</a>';
-      navHtml += '<a href="contact.html" class="btn btn--secondary services-sidebar__btn">Free Consultation</a>';
-      sidebar.innerHTML = navHtml;
-
-      // Active link tracking
-      var sidebarLinks = sidebar.querySelectorAll('.services-sidebar__link');
-      if ('IntersectionObserver' in window) {
-        var sidebarObserver = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              sidebarLinks.forEach(function (link) {
-                link.classList.toggle('services-sidebar__link--active',
-                  link.getAttribute('href') === '#' + entry.target.id);
-              });
-            }
-          });
-        }, { rootMargin: '-20% 0px -60% 0px' });
-
-        serviceSections.forEach(function (sec) {
-          sidebarObserver.observe(sec);
-        });
-      }
-    }
+    }, { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' });
+    serviceSections.forEach(function (s) { sidebarObserver.observe(s); });
   }
 
   /* -----------------------------------------

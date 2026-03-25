@@ -2520,7 +2520,7 @@ a.card--service:hover .card__link {
   }
 
   .about-hero__inner > div:last-child {
-    padding: var(--space-2xl) var(--space-4xl) var(--space-2xl) var(--space-4xl);
+    padding: var(--space-4xl);
   }
 }
 
@@ -2552,16 +2552,16 @@ a.card--service:hover .card__link {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-full);
-  background-color: var(--color-primary);
-  color: var(--color-text-inverse);
+  background-color: transparent;
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .quals-list__icon svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .quals-list__text {
@@ -2635,7 +2635,7 @@ a.card--service:hover .card__link {
 /* Service section wrapper — use around each service block */
 .service-section {
   padding: 96px 0;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 2px solid var(--color-border);
 }
 
 .service-section:last-of-type {
