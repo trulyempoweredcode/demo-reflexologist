@@ -2755,7 +2755,6 @@ a.card--service:hover .card__link {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
-  padding-top: 60px;
 }
 
 .services-sidebar {
@@ -2998,7 +2997,7 @@ a.card--service:hover .card__link {
    PAGE HEADER (inner pages)
    ============================================= */
 .page-header {
-  padding: var(--space-2xl) 0;
+  padding: 60px 0;
   background-color: var(--color-bg-alt);
   text-align: center;
 }
