@@ -2281,7 +2281,7 @@ a.card--service:hover .card__link {
 .form__select {
   width: 100%;
   padding: var(--space-md);
-  border: 1px solid var(--color-border);
+  border: 2px solid #ced1d5;
   border-radius: var(--radius-md);
   background-color: var(--color-surface);
   font-size: var(--text-base);
@@ -2795,6 +2795,7 @@ a.card--service:hover .card__link {
 .services-sidebar__nav {
   display: flex;
   flex-direction: column;
+  gap: var(--space-lg);
   margin-bottom: var(--space-xl);
 }
 
@@ -3383,6 +3384,48 @@ a.card--service:hover .card__link {
 
 .text-block .btn {
   margin-top: var(--space-lg);
+}
+
+/* =============================================
+   CONTENT: STORY SPLIT
+   Centered heading above, then h3 lead on the left
+   with body paragraphs on the right.
+   ============================================= */
+.story-split {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+}
+
+.story-split .text-center {
+  margin-bottom: var(--space-2xl);
+}
+
+.story-split__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.story-split__lead {
+  line-height: var(--line-height-tight);
+  color: var(--color-text-heading);
+}
+
+.story-split__content p {
+  color: var(--color-text-light);
+  line-height: var(--line-height-relaxed);
+}
+
+.story-split__content p + p {
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .story-split__body {
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-2xl);
+  }
 }
 
 /* =============================================
@@ -4973,7 +5016,7 @@ a.card--service:hover .card__link {
   padding: var(--space-lg) 0;
   text-align: left;
   font-family: var(--font-heading);
-  font-size: calc(var(--text-h3-desktop) * 0.85);
+  font-size: calc(var(--text-h3-desktop) * 0.8);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-heading);
   cursor: pointer;
@@ -5013,7 +5056,7 @@ a.card--service:hover .card__link {
 }
 
 .accordion__content p {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-light);
   line-height: var(--line-height-relaxed);
 }
