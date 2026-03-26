@@ -1586,7 +1586,7 @@ body:has(.nav--transparent) .hero--image {
 }
 
 .hero--showcase .hero__ticks {
-  flex-wrap: nowrap;
+  margin-bottom: 0;
 }
 
 /* --- Dark card (default) --- */
@@ -1613,10 +1613,12 @@ body:has(.nav--transparent) .hero--image {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Left/right cards: subtle pill styling to keep card compact */
+/* Left/right cards: plain inline ticks to fit within card */
 .hero--showcase-dark:not(.hero--showcase-center) .hero__ticks li {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: none;
+  border: none;
+  padding: var(--space-xs) 0;
+  border-radius: 0;
 }
 
 .hero--showcase-dark .hero__ticks svg {
@@ -1668,10 +1670,12 @@ body:has(.nav--transparent) .hero--image {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Left/right cards: subtle pill styling to keep card compact */
+/* Left/right cards: plain inline ticks to fit within card */
 .hero--showcase-light:not(.hero--showcase-center) .hero__ticks li {
-  background-color: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.08);
+  background: none;
+  border: none;
+  padding: var(--space-xs) 0;
+  border-radius: 0;
 }
 
 .hero--showcase-light .hero__ticks svg {
