@@ -741,6 +741,8 @@
   padding: var(--space-xs) var(--space-md);
   border-radius: var(--radius-full);
   border: 1px solid var(--color-border);
+  text-align: left;
+  white-space: nowrap;
 }
 
 .hero__ticks svg {
