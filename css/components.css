@@ -1611,11 +1611,10 @@ body:has(.nav--transparent) .hero--image {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Left/right cards: strip pill bg/border to keep card compact */
+/* Left/right cards: subtle pill styling to keep card compact */
 .hero--showcase-dark:not(.hero--showcase-center) .hero__ticks li {
-  background: none;
-  border: none;
-  padding: 0;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .hero--showcase-dark .hero__ticks svg {
@@ -1667,11 +1666,10 @@ body:has(.nav--transparent) .hero--image {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Left/right cards: strip pill bg/border to keep card compact */
+/* Left/right cards: subtle pill styling to keep card compact */
 .hero--showcase-light:not(.hero--showcase-center) .hero__ticks li {
-  background: none;
-  border: none;
-  padding: 0;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .hero--showcase-light .hero__ticks svg {
@@ -1869,6 +1867,20 @@ body:has(.nav--transparent) .hero--showcase {
 
 .nav--transparent-dark .nav__toggle {
   border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile menu resets — overlay has a white background, so restore dark text */
+.nav--transparent-dark .nav__mobile .nav__link {
+  color: var(--color-text);
+}
+
+.nav--transparent-dark .nav__mobile .nav__link:hover,
+.nav--transparent-dark .nav__mobile .nav__link--active {
+  color: var(--color-primary);
+}
+
+.nav--transparent-dark .nav__mobile .nav__toggle-bar {
+  background-color: var(--color-text);
 }
 
 /* Two-tier dark */
