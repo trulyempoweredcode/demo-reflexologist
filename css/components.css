@@ -1764,6 +1764,12 @@ body:has(.nav--transparent) .hero--showcase {
     padding: 28px;
   }
 
+  /* Card is full-width on mobile — buttons and ticks can wrap */
+  .hero--showcase .hero__actions,
+  .hero--showcase .hero__ticks {
+    flex-wrap: wrap;
+  }
+
   /* Reset alignment on mobile — always left-aligned full-width */
   .hero--showcase-center .hero__inner,
   .hero--showcase-right .hero__inner {
