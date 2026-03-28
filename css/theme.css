@@ -59,3 +59,17 @@
 .testimonial--standalone .testimonial__stars {
   justify-content: center;
 }
+
+/* Hero: taller on desktop */
+@media (min-width: 768px) {
+  .hero--half .hero__inner {
+    min-height: 770px;
+  }
+}
+
+/* Portrait image — taller on desktop */
+@media (min-width: 768px) {
+  .intro__image-wrap {
+    min-height: 550px;
+  }
+}
