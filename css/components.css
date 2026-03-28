@@ -1046,6 +1046,9 @@
   order: 1;
   width: 100%;
   min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero--half .hero__image-placeholder,
@@ -1980,6 +1983,15 @@ body:has(.nav--transparent) .hero--showcase {
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
   align-items: center;
+}
+
+.intro__image-wrap {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 400px;
 }
 
 .intro__image {
@@ -3468,6 +3480,58 @@ a.card--service:hover .card__link {
   .two-col-text__columns {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-2xl);
+  }
+}
+
+/* =============================================
+   CONTENT: STORY TEXT
+   Centred header spanning full width, then a
+   two-column layout: large pull-quote (left)
+   and regular body text (right).
+   ============================================= */
+.story-text {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+}
+
+.story-text__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.story-text__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.story-text__quote {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--color-text-heading);
+}
+
+.story-text__content p {
+  color: var(--color-text-light);
+  line-height: var(--line-height-relaxed);
+}
+
+.story-text__content p + p {
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .story-text__header {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .story-text__body {
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-3xl);
   }
 }
 
