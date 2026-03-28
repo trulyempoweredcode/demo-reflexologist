@@ -3706,6 +3706,7 @@ a.card--service:hover .card__link {
 .icon-box--left {
   text-align: left;
   display: flex;
+  align-items: center;
   gap: var(--space-lg);
 }
 
@@ -4723,7 +4724,7 @@ a.card--service:hover .card__link {
 }
 
 .comparison__card h3 {
-  font-size: var(--text-md);
+  font-size: var(--text-xl);
   margin-bottom: var(--space-lg);
 }
 
@@ -5197,12 +5198,13 @@ a.card--service:hover .card__link {
    ============================================= */
 .comparison-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border-light);
+  border: 2px solid #ccc;
 }
 
 .comparison-table thead th {
@@ -5213,7 +5215,12 @@ a.card--service:hover .card__link {
   font-weight: var(--font-weight-bold);
   color: var(--color-text-heading);
   text-align: center;
-  border-bottom: 2px solid var(--color-border);
+  border-bottom: 2px solid #ccc;
+  border-right: 1px solid var(--color-border-light);
+}
+
+.comparison-table thead th:last-child {
+  border-right: none;
 }
 
 .comparison-table thead th:first-child {
@@ -5225,7 +5232,12 @@ a.card--service:hover .card__link {
   font-size: var(--text-sm);
   color: var(--color-text);
   border-bottom: 1px solid var(--color-border-light);
+  border-right: 1px solid var(--color-border-light);
   text-align: center;
+}
+
+.comparison-table tbody td:last-child {
+  border-right: none;
 }
 
 .comparison-table tbody td:first-child {
@@ -5718,6 +5730,64 @@ a.card--service:hover .card__link {
   background: rgba(255, 255, 255, 0.25);
 }
 
+/* =============================================
+   VIDEO EMBED
+   Responsive 16:9 wrapper for iframe videos.
+   ============================================= */
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: var(--radius-lg);
+}
+
+/* =============================================
+   VIDEO SPLIT
+   Optional centered header across both columns,
+   then text left + video right. Stacks on mobile.
+   ============================================= */
+.video-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.video-split__header {
+  text-align: center;
+}
+
+.video-split__header h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.video-split__content p {
+  color: var(--color-text-light);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (min-width: 768px) {
+  .video-split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .video-split__header {
+    grid-column: 1 / -1;
+  }
+}
+
 /* --- Back to Top --- */
 .back-to-top {
   position: fixed;
@@ -5988,6 +6058,7 @@ a.card--service:hover .card__link {
   font-size: var(--text-sm);
   line-height: var(--line-height-relaxed);
   color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0;
 }
 
 .cookie-banner__text a {
@@ -6011,6 +6082,30 @@ a.card--service:hover .card__link {
 
 .cookie-banner__accept:hover {
   background: var(--color-primary-dark);
+}
+
+.cookie-banner__decline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cookie-banner__decline:hover {
+  color: var(--color-text-inverse);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.cookie-banner__buttons {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
 }
 
 @media (min-width: 768px) {

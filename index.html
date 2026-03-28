@@ -119,8 +119,11 @@
   <main id="main">
 
     <!-- SECTION: hero -->
-    <section class="hero hero--minimal">
+    <section class="hero hero--half">
       <div class="container hero__inner">
+        <div class="hero__image-wrap">
+          <img src="images/hero.jpg" alt="Sophie Needham performing a reflexology treatment" class="hero__image" width="800" height="600" loading="eager">
+        </div>
         <div class="hero__content">
           <span class="hero__label">Welcome to Sophie Needham Reflexology</span>
           <h1 class="hero__heading">Nurturing feet, restoring balance</h1>
@@ -135,49 +138,38 @@
             <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Free initial consultation</li>
           </ul>
         </div>
-        <div class="hero__image-wrap">
-          <img src="images/hero.jpg" alt="Sophie Needham Reflexology — professional reflexology practice" class="hero__image" width="800" height="600" loading="eager">
-        </div>
       </div>
     </section>
     <!-- /SECTION: hero -->
 
-    <!-- SECTION: info-band -->
-    <section class="info-band info-band--primary">
-      <div class="container info-band__inner">
-        <div class="info-band__item">
-          <div class="info-band__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <div class="info-band__item-text">
-            <span class="info-band__title">500+ Happy Feet</span>
-            <span class="info-band__text">Helping clients step into better health</span>
-          </div>
+    <!-- SECTION: text-banner -->
+    <section class="section section--alt">
+      <div class="container text-center">
+        <span class="section-label">What is Reflexology?</span>
+        <h2>A gentle therapy that works with your whole body</h2>
+        <p class="text-block text-block--center">Reflexology works with the reflex points on your feet to encourage your body's own healing response. It's deeply relaxing, completely non-invasive, and suitable for all ages. Whether you're dealing with stress, pain, hormonal changes, or simply need time to switch off — your feet hold the key.</p>
+      </div>
+    </section>
+    <!-- /SECTION: text-banner -->
+
+    <!-- SECTION: image-grid -->
+    <section class="section reveal">
+      <div class="container grid grid--3">
+        <div class="image-card">
+          <img src="images/grid-1.jpg" alt="Close-up of a reflexology foot treatment" class="image-card__image" width="800" height="600" loading="lazy">
         </div>
-        <div class="info-band__item">
-          <div class="info-band__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <div class="info-band__item-text">
-            <span class="info-band__title">12 Years' Experience</span>
-            <span class="info-band__text">Dedicated practice and continued professional development</span>
-          </div>
+        <div class="image-card">
+          <img src="images/grid-2.jpg" alt="Essential oils and treatment tools" class="image-card__image" width="800" height="600" loading="lazy">
         </div>
-        <div class="info-band__item">
-          <div class="info-band__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <div class="info-band__item-text">
-            <span class="info-band__title">MAR Registered &amp; Insured</span>
-            <span class="info-band__text">Member of the Association of Reflexologists</span>
-          </div>
+        <div class="image-card">
+          <img src="images/grid-3.jpg" alt="Relaxing treatment room environment" class="image-card__image" width="800" height="600" loading="lazy">
         </div>
       </div>
     </section>
-    <!-- /SECTION: info-band -->
+    <!-- /SECTION: image-grid -->
 
     <!-- SECTION: intro -->
-    <section class="section section--alt">
+    <section class="section section--alt reveal">
       <div class="container intro__inner">
         <div class="intro__image-wrap">
           <img src="images/home-portrait.jpg" alt="Sophie Needham, reflexologist at Sophie Needham Reflexology" class="intro__image" width="600" height="800" loading="lazy">
@@ -185,7 +177,6 @@
         <div class="intro__text">
           <span class="section-label">Hello, I'm Sophie</span>
           <h2>Helping you feel grounded, calm, and well</h2>
-          <p>Reflexology is a beautifully gentle therapy that works with the reflex points on your feet to encourage your body's own healing response. Whether you're dealing with stress, aches and pains, hormonal changes, or simply need time to switch off, a session with me offers a deeply relaxing space to let go.</p>
           <p>I work from The Wellbeing Rooms in the heart of Leamington Spa, where every treatment is tailored to you and your needs. I believe that looking after your feet is one of the kindest things you can do for your whole body.</p>
           <a href="about.html" class="btn btn--secondary">More About Me</a>
         </div>
@@ -359,7 +350,7 @@
   <div class="cookie-banner" role="dialog" aria-label="Cookie consent">
     <div class="cookie-banner__inner">
       <p class="cookie-banner__text">We use cookies to improve your experience. See our <a href="cookies-policy.html">cookie policy</a> for details.</p>
-      <button class="cookie-banner__accept">Accept</button>
+      <div class="cookie-banner__buttons"><button class="cookie-banner__accept">Accept</button><button class="cookie-banner__decline">Decline</button></div>
     </div>
   </div>
 
