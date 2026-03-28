@@ -2485,7 +2485,7 @@ a.card--service:hover .card__link {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
-  align-items: center;
+  align-items: stretch;
 }
 
 .about-hero h1,
