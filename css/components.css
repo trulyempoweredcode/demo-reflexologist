@@ -2555,6 +2555,71 @@ a.card--service:hover .card__link {
   }
 }
 
+/* =============================================
+   ABOUT: SPLIT THIRD
+   1fr image (left) + 2fr text (right).
+   Narrower image column than about-hero.
+   Uses background-image for full-bleed coverage.
+   ============================================= */
+.about-split-third {
+  padding: 0;
+}
+
+.about-split-third__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: stretch;
+}
+
+.about-split-third h1,
+.about-split-third h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.about-split-third__image-wrap {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 350px;
+}
+
+.about-split-third__text {
+  padding: var(--space-2xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-split-third__text p {
+  color: var(--color-text-light);
+  line-height: var(--line-height-relaxed);
+}
+
+.about-split-third__text p + p {
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .about-split-third {
+    overflow: hidden;
+  }
+
+  .about-split-third__inner {
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+  }
+
+  .about-split-third__image-wrap {
+    overflow: hidden;
+    min-height: 500px;
+  }
+
+  .about-split-third__text {
+    padding: var(--space-4xl);
+  }
+}
+
 /* Qualifications */
 .quals-list {
   display: grid;
